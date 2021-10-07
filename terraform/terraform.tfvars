@@ -1,0 +1,5 @@
+do_api_token = "TOKENID"
+droplet_name = "deb10"
+region_name = "fra1"
+sshkey_name = "ob"
+pvt_key = "~/.ssh/id_rsa"

@@ -1,0 +1,22 @@
+{
+  "variables": {
+      "do_api_token": "TOKENID"
+  },
+  "builders": [
+    {
+      "droplet_name": "deb10",
+      "snapshot_name": "deb10",
+      "type": "digitalocean",
+      "ssh_username": "root",
+      "api_token": "{{ user `do_api_token` }}",
+      "image": "debian-10-x64",
+      "region": "fra1",
+      "size": "s-1vcpu-1gb"
+    }],
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "configs/install.sh"
+    }
+  ]
+}
